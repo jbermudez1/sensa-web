@@ -1,0 +1,78 @@
+html
+	head
+		title Sensa
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+		link(href="css/index.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+		link(href="css/index.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+	body
+		//- menu mobil
+		include ./components/mobil-menu/index.jade
+		section
+			include ./components/topbar/index.jade
+		main.container
+			article
+				div.title-section
+					p.title Las mejoras marcas de nivel internacional
+					p.title para tu proyecto
+				div.text-center
+					img.img-responsive(src="img/marcas.jpg")
+		section.bggray
+			article.container.topadding
+				div.title-section
+					p.title Tenemos todo lo que necesitas
+				div.row.services.text-center
+					div.col-xs-6.col-sm-3
+						img.img-responsive(src="img/c1.png")
+						h3.slimtext Conductores Eléctricos
+					div.col-xs-6.col-sm-3
+						img.img-responsive(src="img/c2.png")
+						h3.slimtext Soluciones de iluminación
+					div.col-xs-6.col-sm-3
+						img.img-responsive(src="img/c3.png")
+						h3.slimtext Media y alta tensión
+					div.col-xs-6.col-sm-3
+						img.img-responsive(src="img/c4.png")
+						h3.slimtext Asesoría de expertos
+
+		section.promotion
+			div#carousel-example-generic.carousel.slide(data-ride='carousel')
+				ol.carousel-indicators
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')
+					li(data-target='#carousel-example-generic', data-slide-to='1')
+					li(data-target='#carousel-example-generic', data-slide-to='2')
+				.carousel-inner(role='listbox')
+					.item.active
+						img(src='img/sampleplublic.jpg', alt='...')
+						.carousel-caption
+					.item
+						img(src='img/sampleplublic.jpg', alt='...')
+						.carousel-caption
+				// Controls
+				a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+					span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+					span.sr-only Previous
+				a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+					span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+					span.sr-only Next
+				//- 
+		section.container
+			article
+				div.row
+					div.col-xs-12.col-sm-4.hidden-xs
+						img(src="img/lampara.png")
+					div.col-xs-12.col-sm-8.brand-smg
+						p Nuestra filosofia es tener siempre clientes altamente satisfechos con disponibilidad constante de los productos mas reconocidos en el mercado. 
+
+						p Atender al cliente hablándole siempre con la verdad, vendiéndole con la debida honradez y a su entera satisfacción, para así lograr una verdadera empresa con vocación de servicio y aplicar nuestro lema.
+		section#map map
+		footer
+			include ./components/footer/index.jade
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&callback=initMap')
+
+		script(src='js/app.js')
+

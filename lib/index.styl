@@ -1,0 +1,76 @@
+// LAYOUT PRINCIPAL
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,700');
+@import 'nib'
+// vars
+$menu-height = 5em
+$sensa-red = #ED1E24
+$sensa-blue = #2A2B79
+
+.img-responsive
+	display inline-block
+// resolution
+$screen-sm = 768px
+$screen-md = 992px
+$screen-lg = 1200px
+.slimtext
+	font-weight 100
+.bggray
+	background-color #F8F8F8
+.topadding
+	padding-top 4em
+	padding-bottom 4em
+// MIXIMS
+background-linear-gradient(startPoint, startColor, startInterval, endColor, endInterval)
+	background-color startColor
+	background-image -webkit-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -moz-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	
+body
+	font-family 'Roboto', sans-serif
+	
+// MAIN CONTAINER
+.title-section
+	text-align center
+	font-weight 100
+	&:after
+		content ""
+		border-bottom solid 5px $sensa-blue
+		width 10em
+		display block
+		left 0
+		right 0
+		margin-left auto
+		margin-right auto
+	.title:nth-child(1n)
+		font-size 2.2em
+		line-height 1em
+		color gray
+	.title:nth-child(2n)
+		font-size 1.2em
+		color $sensa-red
+		font-weight 400
+.services
+	padding-top 3em
+	color gray
+.promotion
+	text-align center
+	// .item
+	// 	display flex
+	// 	justify-content center
+.brand-smg
+	font-size 1.5em
+	color gray
+	font-weight 100
+	font-style italic
+	padding-top 3em
+	
+// mapa
+#map
+	height 50vh
+@import 'components/topbar/index.styl'
+@import 'components/mobil-menu/index.styl'
+@import 'components/footer/index.styl'
+
