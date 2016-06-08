@@ -1,0 +1,78 @@
+html
+	head
+		title Sensa
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+		link(href="css/index.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+		link(href="css/index.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+	body
+		//- menu mobil
+		include ./components/mobil-menu/index.jade
+		section
+			include ./components/nav/nav.jade
+			//- include ./components/topbar/index.jade
+		div.title-bar
+			div.container
+				h1 Contacto
+		main.container.contact
+			div.row
+				div.col-sm-4.col-sm-offset-2
+					h3 Culiacan, Sinaloa. Sucursal Bravo
+					hr
+					p Surtidora Electrica del Noroeste SA de CV, Tel: (667), mail: bravo@sensa.com.mx
+				div.col-sm-4
+					h3 Guadalajara, Jalisco
+					hr
+					p Electro Materiales SENSA SA de CV Tel: (333)-8110310 mail: guadalajara@sensa.com.mx
+			div.row
+				div.col-sm-4.col-sm-offset-2
+					h3 Culiacan, Sinaloa. Bella Vista
+					p Electro Materiales SENSA SA de CV Tel: (667)-7169550 mail: sensa@sensa.com.mx
+				div.col-sm-4
+					h3 Ensenada, B.C.N
+					p Surtidora Electrica del Noroeste SA de CV Tel: (646)-1725927 mail: ensenada@sensa.com.mx
+			div.row
+				div.col-sm-4.col-sm-offset-2
+					h3 Culiacan, Sinaloa. Insurgentes
+					p Electro Materiales SENSA SA de CV Tel: (667)-7147050 mail: sensa@sensa.com.mx
+				div.col-sm-4
+					h3 Mexicali, B.C.N
+					p Surtidora Electrica del Noroeste SA de CV Tel: (686)-5655526 mail: mexicali@sensa.com.
+			div.row
+				div.col-sm-4.col-sm-offset-2
+					h3 Hermosillo, Sonora
+					p SENSA Surtidora Electrica SA de CV Tel: (662)-2156991 mail: hermosillo@sensa.com.mx
+				div.col-sm-4
+					h3 Tijuana, B.C.N
+					p Surtidora Electrica del Noroeste SA de CV Tel: (664)-6814028 mail: tijuana@sensa.com.mx
+			div.row
+				div.col-sm-4.col-sm-offset-2
+					h3 Nogales, Sonora
+					p SENSA Surtidora Electrica, S.A. DE C.V. Blvd. Luis Donaldo Colosio No. 4100 Bodega No. 7, Col. Encinos, C.P. 84064 TELS (01 631) 314 6025, (01 631) 319 2416 mail: nogales@sensa.com.mx
+				div.col-sm-4
+					h3 La Paz, B.C.S
+					p Surtidora Electrica del Noroeste SA de CV Tel: (612)-1-294-196 mail: lapaz@sensa.com.mx
+
+
+
+
+
+
+
+
+
+
+				
+					
+
+			
+		footer
+			include ./components/footer/index.jade
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&callback=initMap')
+
+		script(src='js/app.js')
+
