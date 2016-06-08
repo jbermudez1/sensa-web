@@ -1,3 +1,4 @@
+// add document
 $(document).ready(ready)
 
 function ready (argument) {
