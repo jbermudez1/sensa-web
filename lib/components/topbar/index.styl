@@ -1,35 +1,4 @@
-//- TOPBAR
-nav
-	box-shadow 0px 0px 10px black
-	position fixed
-	width 100%
-	background-color white
-	z-index 99
-	border-top solid 2px $sensa-red
-	height $menu-height
-	padding-top 0.5em
-	padding-bottom 0.5em
-	.topbar
-		display flex
-		align-items center
-		.burger
-			color $sensa-blue
-			font-size 2em
-			margin-right 1em
-		.logo
-			flex-grow 2
-			text-align center
-			img
-				max-height 4em
-		.menu
-			ul
-				display flex
-				list-style none
-				li 
-					margin-left 1em
-					color $sensa-blue
-					a
-						color $sensa-blue
+
 .banner
 	background-image url('../img/banner1.jpg')
 	background-position center
@@ -58,15 +27,18 @@ nav
 	position relative
 	padding-right 0px
 	padding-left 0px
-	min-height 15em
+	min-height 20em
 	padding-bottom 2em
+	hr 
+		opacity 0.2
+		
 	.box
 		// position absolute
 		// width 100%
 		top -5em
 		background-color $sensa-blue
 		background-linear-gradient(top, #FF3F3E, 5%, #A01E1F, 85%)
-		min-height 10em
+		min-height 15em
 		color white
 		padding 1em
 		box-shadow 0px 0px 10px black
@@ -74,25 +46,40 @@ nav
 			img
 				width 3em
 		.circle-wrap
-			display flex
-			flex-flow column
-			align-items center
 			position relative
-			.float
-				right 35%
-				top -4em
+		// 	display flex
+		// 	flex-flow column
+		// 	align-items center
+		// 	position relative
+		// 	a
+		// 		color white
+		// 		&:hover
+		// 			text-decoration none
+					
+			// .float
+			// 	right 35%
+			// 	top -4em
 				
-			.circle
-				background-color $sensa-blue
-				width 8em
-				height 8em
-				border-radius 40em	
-				padding 3em
-				display flex
-				justify-content center
-				align-items center
+			// .circle
+			// 	background-color $sensa-blue
+			// 	width 8em
+			// 	height 8em
+			// 	border-radius 40em	
+			// 	padding 3em
+			// 	display flex
+			// 	justify-content center
+			// 	align-items center
 		
-
+.ch-grid
+	width 14em
+	height 11em
+	list-style none
+	// position absolute
+	left 0
+	right 0
+	margin-left auto
+	margin-right auto
+	top 0em
 @media (min-width $screen-sm)
 	nav
 		.topbar

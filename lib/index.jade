@@ -3,10 +3,13 @@ html
 		title Sensa
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, user-scalable=no")
-		link(href="css/index.css" rel="stylesheet")
+		link(href="css/normalize.css" rel="stylesheet")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
 		link(href="css/index.css" rel="stylesheet")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+		link(rel='stylesheet', type='text/css', href='css/circle/style2.css')
+
+		script localStorage.setItem("from", "index")
 	body
 		//- menu mobil
 		include ./components/mobil-menu/index.jade
@@ -16,7 +19,7 @@ html
 		main.container
 			article
 				div.title-section
-					p.title Las mejoras marcas de nivel internacional
+					p.title Las mejoras marcas de nivel
 					p.title para tu proyecto
 				div.marcas
 						div.row
@@ -107,12 +110,16 @@ html
 						p Nuestra filosofia es tener siempre clientes altamente satisfechos con disponibilidad constante de los productos mas reconocidos en el mercado. 
 
 						p Atender al cliente hablándole siempre con la verdad, vendiéndole con la debida honradez y a su entera satisfacción, para así lograr una verdadera empresa con vocación de servicio y aplicar nuestro lema.
-		section#map map
+		section
+			div.title-section
+					p.title Encuentra la sucursal más cercana
+					//- p.title para tu proyecto
+			article.map map
 		footer
 			include ./components/footer/index.jade
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
 		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&callback=initMap')
-
+		script localStorage.setItem('page', 'index')
 		script(src='js/app.js')
 

@@ -3,6 +3,15 @@ $(document).ready(ready)
 
 function ready (argument) {
 	console.log("ready")
+  menu();
+}
+
+function menu () {
+  console.log('its menu..')
+  var page = localStorage.getItem('page');
+  console.log(page)
+    $('.' + page).addClass('active')
+
 }
 
 $('.burger').click(function () {
@@ -35,27 +44,9 @@ function enableScroll (argument) {
   // Create a map object and specify the DOM element for display.
 
 function initMap() {
-	var styles = [
-  {
-    stylers: [
-      { hue: "#00ffe6" },
-      { saturation: -20 }
-    ]
-  },{
-    featureType: "road",
-    elementType: "geometry",
-    stylers: [
-      { lightness: 100 },
-      { visibility: "simplified" }
-    ]
-  },{
-    featureType: "road",
-    elementType: "labels",
-    stylers: [
-      { visibility: "off" }
-    ]
-  }
-];
+  $('.map').attr('id', 'map');
+  var from = 'branch'
+	
 	var sucursales = {
 		culiacanBravo: {
 			point: {lat:24.8018525, lng: -107.4023223},
@@ -99,13 +90,27 @@ function initMap() {
     },
 	}
 
+  // if si se esta cargando desde la seccion de susucrsales
+  if (localStorage.getItem("from") === "branch") {
+    console.log('entrnado desde branch')
+    var thebranch = 'culiacanBravo'
+    refreshMap();
+    $('.branch-select').change( function () {
+      thebranch = $(this).val()
+      console.log(thebranch)
+      refreshMap();
+    })
 
+
+// desde el index
+  } if (localStorage.getItem("from") === "index") {
 
 	var map = new google.maps.Map(document.getElementById('map'), {
     center: sucursales.culiacanBravo.point,
-    zoom: 12,
+    zoom: 6,
     disableDefaultUI: true,
-    zoomControl: false
+    zoomControl: false,
+    scrollwheel: false
   	});
 
   	// setea estilos al mapa
@@ -124,11 +129,11 @@ function initMap() {
   			content: val.details
   		})
   		// agrenado evento click
-  		suc.addListener('click', function () {
-  			info.open(map, suc)
-
-  		})
+  		// suc.addListener('click', function () {
+  		// 	info.open(map, suc)
+  		// })
   		suc.setMap(map);
+
 	});
   	// var culiacanBravo = new google.maps.Marker({
   	// 	position: sucursales.culiacanBravo.point,
@@ -143,10 +148,29 @@ function initMap() {
   	// 	// body...
   	// })
 
+};
 
-}
+  function refreshMap () {
+      var map = new google.maps.Map(document.getElementById('map'), {
+      center: sucursales[thebranch].point,
+      zoom: 12,
+      disableDefaultUI: true,
+      zoomControl: false
+      });
 
-function setmarkers (key, val) {
-	// body...
-}
+      suc = new google.maps.Marker({
+          position: sucursales[thebranch].point,
+          map: map
+        }) 
+    // body...
+    var datos = new google.maps.InfoWindow({
+     content: sucursales[thebranch].details
+    })
+    suc.addListener('click', function () {
+     datos.open(map, suc)
+     // body...
+    })
+  }
+
+} // cierre mapinit
 

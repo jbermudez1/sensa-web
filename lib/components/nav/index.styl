@@ -1,0 +1,60 @@
+//- TOPBAR
+nav
+	box-shadow 0px 0px 10px black
+	position fixed
+	width 100%
+	background-color white
+	z-index 99
+	border-top solid 2px $sensa-red
+	height $menu-height
+	.topbar
+		display flex
+		align-items center
+		.burger
+			color $sensa-blue
+			font-size 2em
+			margin-right 1em
+		.logo
+			flex-grow 2
+			text-align center
+			img
+				max-height 4em
+		.menu
+			height 100%
+			display flex
+			ul
+				display flex
+				list-style none
+				height 100%
+				align-items center
+				li
+					color $sensa-blue
+					font-family 'Roboto', sans-serif
+					font-size 1.1em
+					height 100%
+					display flex
+					align-items center
+					width 9em
+					transition all 0.1s ease
+					border-right dashed 1px lightgray
+					border-bottom solid 5px white
+					
+					a
+						color $sensa-blue
+						width 100%
+						display block
+						height 100%
+						display flex
+						align-items center
+						justify-content center
+						text-align center
+						&:hover
+							text-decoration none
+						
+					&:hover
+						background-color #F5F5F5
+				.active
+					border-bottom solid 5px #2C85CE
+					a
+						color $sensa-red !important
+							

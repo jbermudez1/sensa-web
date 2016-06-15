@@ -4,16 +4,17 @@ nav
 			i.fa.fa-bars(aria-hidden="true")
 
 		div.logo
-			img.img-responsive(src="img/sensalogo.svg")
+			a(href="index.html")
+				img.img-responsive(src="img/sensalogo.svg")
 		div.menu.hidden-xs
 			ul
-				li 
+				li.index 
 					a(href="index.html") Inicio
-				li 
-					a(href="#") Cliente Sensa
-				li 
-					a(href="#") Sucursales
-				li
-					a(href="#") Proveedores
-				li 
+				li.clients 
+					a(href="login.html") Cliente Sensa
+				li.branch 
+					a(href="branch.html") Sucursales
+				//- li
+				//- 	a(href="#") Proveedores
+				li.contact 
 					a(href="contact.html") Contacto

@@ -4,34 +4,31 @@
     <title>Sensa</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
-    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/normalize.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
     <link href="css/index.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
   </head>
   <body>
-    <div class="mobil-menu">this mobil menu
+    <div class="mobil-menu"> 
       <ul>
-        <li>menu 1</li>
-        <li>menu 1</li>
-        <li>menu 1</li>
-        <li>menu 1</li>
-        <li>menu 1</li>
-        <li>menu 1</li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Cliente Sensa</a></li>
+        <li><a href="branch.html">Sucursales</a></li>
+        <li><a href="contact.html">Contacto</a></li>
       </ul>
     </div>
     <section>
       <nav>
         <div class="container topbar">
           <div class="burger visible-xs"><i aria-hidden="true" class="fa fa-bars"></i></div>
-          <div class="logo"><img src="img/sensalogo.svg" class="img-responsive"/></div>
+          <div class="logo"><a href="index.html"><img src="img/sensalogo.svg" class="img-responsive"/></a></div>
           <div class="menu hidden-xs">
             <ul>
-              <li> <a href="index.html">Inicio</a></li>
-              <li> <a href="#">Cliente Sensa</a></li>
-              <li> <a href="#">Sucursales</a></li>
-              <li><a href="#">Proveedores</a></li>
-              <li> <a href="contact.html">Contacto</a></li>
+              <li class="index"> <a href="index.html">Inicio</a></li>
+              <li class="clients"> <a href="login.html">Cliente Sensa</a></li>
+              <li class="branch"> <a href="branch.html">Sucursales</a></li>
+              <li class="contact"> <a href="contact.html">Contacto</a></li>
             </ul>
           </div>
         </div>
@@ -42,7 +39,7 @@
         <h1>Contacto</h1>
       </div>
     </div>
-    <main class="container contact">
+    <main class="container contact"><br/><br/>
       <div class="row">
         <div class="col-sm-4 col-sm-offset-2">
           <h4>Culiacan, Sinaloa. Sucursal Bravo</h4>
@@ -121,6 +118,7 @@
               <div class="form-group">
                 <textarea type="text" placeholder="Comentarios" class="form-control"></textarea>
               </div>
+              <hr/>
               <button type="button" class="btn btn-info">Enviar</button>
             </div>
           </div>
@@ -132,18 +130,20 @@
         <div class="row">
           <div class="col-md-5 slimtext"><span>Surtidora Eléctrica del Noroeste</span><br/><span>SA de CV. Tdoos los derechos reservados.</span><br/><br/><a href="#">Aviso de Privacidad</a></div>
           <div class="col-md-3 text-center minimap"><img src="img/mexico.svg"/><br/>
-            <button class="viewmore">Mas detalles</button>
+            <button onclick="window.location.href=&quot;branch.html&quot;" class="viewmore">Mas detalles</button>
           </div>
           <div class="col-md-3">
-            <h2>7 sucursales</h2>
+            <h2 style="line-height: 0.1em">7 sucursales</h2>
             <p>en todo el pais</p>
+            <hr/>
             <ul>
-              <li>La paz, Baja California Sur</li>
+              <li>Culiacán, Sinaloa</li>
+              <li>Tijuana, BCN</li>
+              <li>Mexicali, BCN</li>
               <li>Ensenada, Baja California Norte</li>
+              <li>La paz, Baja California Sur</li>
               <li>Hermosillo, Sonora</li>
               <li>Nogales, Sonora</li>
-              <li>Culiacán, Sinaloa</li>
-              <li>Guadalajara Jalisco</li>
             </ul>
           </div>
         </div>
@@ -151,7 +151,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&amp;callback=initMap"></script>
+    <script>localStorage.setItem('page', 'contact')</script>
     <script src="js/app.js"></script>
   </body>
 </html>

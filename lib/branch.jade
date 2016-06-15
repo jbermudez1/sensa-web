@@ -1,0 +1,45 @@
+html
+	head
+		title Sensa
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+		link(href="css/normalize.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+		link(href="css/index.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+		script localStorage.setItem("from", "branch")
+	body
+		//- menu mobil
+		include ./components/mobil-menu/index.jade
+		section
+			include ./components/nav/nav.jade
+			//- include ./components/topbar/index.jade
+		div.title-bar
+			div.container.isflex
+				h1 Selecciona sucursal: 
+				select.branch-select
+					option(value="culiacanBravo") Culiacan, Sinaloa - Nicolas Bravo
+					option(value="culiacanCentro") Culiacan, Sinaloa - Insurgentes
+					option(value="culiacanCedis") Culiacan, Sinaloa - CEDIS
+					option(value="sonoraHermosillo") Hermosillo, Sonora - Loma Linda
+					option(value="sonoraNogales") Nogales, Sonora - Encinos
+					option(value="bajacaliforniaEnsenada") Enenada, BCN - Zona Centro
+					option(value="bajacaliforniaMexicali") Mexicli, BCN - Independencia
+					option(value="bajacaliforniaTijuana") Tijuana, BCN - 20 de noviembre
+					option(value="bajacaliforniasurLapaz") La Paz, BCS - Las garzas
+					option(value="jaliscoGuadalajara") Guadalajara, Jalisco - Col. Moderna
+
+
+
+			
+		main.branch
+			div.map.mapinbranch
+		//- div.branch-box box
+			
+		footer
+			include ./components/footer/index.jade
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&callback=initMap')
+		script localStorage.setItem('page', 'branch')
+		script(src='js/app.js')

@@ -35,6 +35,7 @@ body
 .title-section
 	text-align center
 	font-weight 100
+	margin-bottom 3em
 	&:after
 		content ""
 		border-bottom solid 5px $sensa-blue
@@ -46,12 +47,12 @@ body
 		margin-right auto
 	.title:nth-child(1n)
 		font-size 2.2em
-		line-height 1em
+		line-height 0.8em
 		color gray
 	.title:nth-child(2n)
-		font-size 1.2em
+		font-size 1.8em
 		color $sensa-red
-		font-weight 400
+		font-weight 300
 .services
 	padding-top 3em
 	color gray
@@ -77,7 +78,6 @@ body
 	background-color #2C85CB
 	padding-top $menu-height
 	color white
-	margin-bottom 5em
 .contact
 	.row
 		div
@@ -95,8 +95,101 @@ body
 	.form-input
 		margin-bottom 5em
 
+.branch
+	height 70vh
+	// background-image url('../img/demomap.jpg')
+	// background-size cover
+	// padding 4em
+	// display flex
+	// justify-content center
+	.mapinbranch
+		height 70vh !important
+.branch-box
+	width 50%
+	height 50%
+	background-color white
+	padding 1em
+	box-shadow 0px 0px 20px black
+.isflex
+	display flex
+	flex-flow column
+	align-items center
+	h1
+		font-size 2em !important
+	.branch-select
+		background-color red !important
+		font-size 1em !important
+		margin-left 1em
 
-	
+// login
+.login
+	background-image url('../img/loginbg.jpg')
+	height 100vh
+	background-size cover
+	display flex
+	flex-flow column
+	justify-content center
+	align-items center
+	.login-box
+		background-color white
+		width 80%
+		box-shadow 0px 0px 10px black
+		display flex
+		flex-flow column
+		padding 2em
+		justify-content center
+		align-items center
+		form
+			width 100%
+			text-align center
+		.clientesensa
+			width 15em
+		.inputgroup
+			text-align left
+			width 100%
+			display flex
+			flex-flow column
+			padding-top 2em
+			label
+				color #2F307C
+				font-weight 400
+			input 
+				font-size 1.5em
+				font-weight 100
+				border 0
+				border-bottom solid 1px lightgray
+		.enterlogin
+			background-color #2F307C
+			border 0px
+			color white
+			padding 0.5em
+			margin-top 2em
+			width 8em
+	.pielogin
+		text-align center
+		color white
+		opacity 0.5
+		padding-top 1em
+		p
+			line-height 1em
+		a 
+			color white
+			text-decoration underline
+@media (min-width $screen-md)
+	.isflex
+		flex-flow row
+		align-items center
+		h1
+			font-size auto !important
+		.branch-select
+			background-color red !important
+			font-size 2em !important
+			margin-left 1em
+	.login
+		.login-box
+			width 30%
+			
+@import 'components/nav/index.styl'
 @import 'components/topbar/index.styl'
 @import 'components/mobil-menu/index.styl'
 @import 'components/footer/index.styl'

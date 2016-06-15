@@ -3,7 +3,7 @@ html
 		title Sensa
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, user-scalable=no")
-		link(href="css/index.css" rel="stylesheet")
+		link(href="css/normalize.css" rel="stylesheet")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
 		link(href="css/index.css" rel="stylesheet")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
@@ -18,6 +18,8 @@ html
 				h1 Contacto
 
 		main.container.contact
+			br
+			br
 			div.row
 				div.col-sm-4.col-sm-offset-2
 					h4 Culiacan, Sinaloa. Sucursal Bravo
@@ -77,26 +79,13 @@ html
 						div.col-sm-4
 							div.form-group
 								textarea.form-control(type="text", placeholder="Comentarios")
+							hr
 							button.btn.btn-info(type='button') Enviar
 
-
-
-
-
-
-
-
-
-
-				
-					
-
-			
 		footer
 			include ./components/footer/index.jade
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
-		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&callback=initMap')
-
+		script localStorage.setItem('page', 'contact')
 		script(src='js/app.js')
 
