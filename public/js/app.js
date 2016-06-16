@@ -4,6 +4,9 @@ $(document).ready(ready)
 function ready (argument) {
 	console.log("ready")
   menu();
+  $('.ch-item').click( function() {
+    window.location.href="/login.html"
+  })
 }
 
 function menu () {
