@@ -1,0 +1,53 @@
+html
+	head
+		title Sensa
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+		link(href="css/normalize.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+		link(href="css/index.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+	body
+		//- menu mobil
+		include ./components/mobil-menu/index.jade
+		section
+			include ./components/nav/nav.jade
+			//- include ./components/topbar/index.jade
+		div.title-bar
+			div.container
+				h1 Sucursales
+		section.main-sucursales
+			div.container
+				div.row
+					div.col-sm-6
+						h2 Sucursales
+						h4 Selecciona un estado
+						h5 Para más información
+					div.col-sm-6
+						h2.title Sinaloa
+						ul
+							li Bravo
+							li Insurgentes
+							li Bellavista
+				div.row
+					div.col-sm-6
+						img(src="img/mexico.png")
+					div.col-sm-3
+						img(src="img/sensa-bravo.jpg")
+					div.col-sm-3
+						h3 Culiacán, Sinaloa
+						h4 Sucursal Bravo
+						p Nicolás Bravo # 403 Nte. Col. Centro Tel: (667) 713 1100 mail: bravo@sensa.com.mx RFC: SEN840615-5U8.
+		section
+			div.title-section
+					p.title Encuentra la sucursal más cercana
+					//- p.title para tu proyecto
+			article.map map
+		footer
+			include ./components/footer/index.jade
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&callback=initMap')
+		script localStorage.setItem('page', 'index')
+		script(src='js/app.js')
+
