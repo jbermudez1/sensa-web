@@ -242,6 +242,21 @@ div
   color: #fff;
   text-decoration: underline;
 }
+.branchlist {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  list-style: none;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+}
+.branchlist li {
+  margin-left: 2em;
+}
 @media (min-width: 992px) {
   .isflex {
     -webkit-box-orient: horizontal;

@@ -27,7 +27,7 @@
             <ul>
               <li class="index"> <a href="index.html">Inicio</a></li>
               <li class="clients"> <a href="login.html">Cliente Sensa</a></li>
-              <li class="branch"> <a href="branch.html">Sucursales</a></li>
+              <li class="branch"> <a href="sucursal.html">Sucursales</a></li>
               <li class="contact"> <a href="contact.html">Contacto</a></li>
             </ul>
           </div>
@@ -49,29 +49,33 @@
           </div>
           <div class="col-sm-6">
             <h2 class="title">Sinaloa</h2>
-            <ul>
+            <ul class="branchlist">
               <li>Bravo</li>
               <li>Insurgentes</li>
               <li>Bellavista</li>
             </ul>
+            <hr/>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6"><img src="img/mexico.png"/></div>
-          <div class="col-sm-3"><img src="img/sensa-bravo.jpg"/></div>
+          <div class="col-sm-6"><img src="img/mexico.png" alt="" usemap="#Map"/><map id="Map" name="Map">
+              <area alt="" title="" href="#1" shape="poly" coords="37,81,59,82,107,163,97,173,27,82"/>
+              <area alt="" title="" href="#2" shape="poly" coords="3,1,41,0,34,40,59,77,33,78"/>
+              <area alt="" title="" href="#3" shape="poly" coords="45,8,89,29,125,30,125,99,110,112,44,20"/>
+              <area alt="" title="" href="#4" shape="poly" coords="109,118,130,101,168,175"/></map></div>
           <div class="col-sm-3">
             <h3>Culiacán, Sinaloa</h3>
             <h4>Sucursal Bravo</h4>
             <p>Nicolás Bravo # 403 Nte. Col. Centro Tel: (667) 713 1100 mail: bravo@sensa.com.mx RFC: SEN840615-5U8.</p>
           </div>
+          <div class="col-sm-3"><img src="img/sensa-bravo.jpg"/></div>
         </div>
       </div>
     </section>
     <section>
       <div class="title-section">
-        <p class="title">Encuentra la sucursal más cercana</p>
+        <p class="title">Encuentra la sucursal más cercana</p><a href="branch.html">a</a>
       </div>
-      <article class="map">map</article>
     </section>
     <footer>
       <div class="container">
@@ -84,14 +88,14 @@
             <h2 style="line-height: 0.1em">7 sucursales</h2>
             <p>en todo el pais</p>
             <hr/>
-            <ul>
-              <li>Culiacán, Sinaloa</li>
-              <li>Tijuana, BCN</li>
-              <li>Mexicali, BCN</li>
-              <li>Ensenada, Baja California Norte</li>
-              <li>La paz, Baja California Sur</li>
-              <li>Hermosillo, Sonora</li>
-              <li>Nogales, Sonora</li>
+            <ul class="states">
+              <li> <a href="sucursal.html">Culiacán, Sinaloa</a></li>
+              <li> <a href="sucursal.html">Tijuana, BCN</a></li>
+              <li> <a href="sucursal.html">Mexicali, BCN</a></li>
+              <li> <a href="sucursal.html">Ensenada, Baja California Norte</a></li>
+              <li> <a href="sucursal.html">La paz, Baja California Sur</a></li>
+              <li> <a href="sucursal.html">Hermosillo, Sonora</a></li>
+              <li> <a href="sucursal.html">Nogales, Sonora</a></li>
             </ul>
           </div>
         </div>
@@ -100,7 +104,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKe6GiNYe3Bx2ccZB8znAgL0eD90lP_0w&amp;callback=initMap"></script>
-    <script>localStorage.setItem('page', 'index')</script>
+    <script>localStorage.setItem('page', 'branch')</script>
     <script src="js/app.js"></script>
   </body>
 </html>
