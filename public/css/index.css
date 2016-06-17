@@ -65,10 +65,6 @@ body {
 .contact .row div h4 {
   text-align: left;
 }
-.main-sucursales {
-  margin-bottom: 5em;
-div
-}
 .formulario .form-title {
   margin-bottom: 4em;
 }
@@ -242,6 +238,16 @@ div
   color: #fff;
   text-decoration: underline;
 }
+.boxcolor {
+  background-color: #f5f5f5;
+  padding: 0.5em;
+}
+.main-sucursales {
+  margin-bottom: 5em;
+}
+.main-sucursales .title {
+  text-transform: capitalize;
+}
 .branchlist {
   display: -webkit-box;
   display: -moz-box;
@@ -256,6 +262,11 @@ div
 }
 .branchlist li {
   margin-left: 2em;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+}
+.branchlist li:hover {
+  border-bottom: 1px solid #ffa500;
 }
 @media (min-width: 992px) {
   .isflex {
@@ -596,6 +607,10 @@ footer {
 }
 footer a {
   color: #fff;
+}
+footer a:hover {
+  color: #ffa500;
+  text-decoration: none;
 }
 footer .minimap {
   padding-top: 2em;

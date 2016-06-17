@@ -177,32 +177,38 @@ function initMap() {
 
 } // cierre mapinit
 var estados = {
-  estados: ['sinaloa','sonora','bcn','bcs'],
+  // estados: ['sinaloa','sonora','bcn','bcs'],
   sinaloa: {
         sucursales: ['bravo','insurgentes','bellavista'],
         bravo: {
+          nombre: 'Bravo',
           estado: 'Culiacán, Sinaloa',
           sucursal: 'Sucursal Bravo',
           direccion: 'Nicolás Bravo #403 Nte. Col. Centro. Tel: (667) 713 1100 mail: bravo@sensa.com.mx RFC: SEN840615-5U8'
         },
         insurgentes: {
+          nombre: 'Insurgentes',
           estado: 'Culiacán, Sinaloa',
           sucursal: 'Sucursal Insurgentes',
           direccion: 'Insurgentes #831 Sur Centro Sinaloa. Tel: (667) 7147050 mail: sensa@sensa.com.mx'
         },
         bellavista: {
+          nombre: 'Bella Vista',
           estado: 'Culiacán, Sinaloa',
           sucursal: 'Surcusal Bellavista-Cedis',
           direccion: 'Carretera a Culiacancito #8333-A Tel: 9 92 16 51, 9 92 16 52 mail: sensa@sensa.com.mx'
-        },
+        }
+      },
   sonora: {
     sucursales: ['hermosillo', 'nogales'],
     hermosillo: {
+       nombre: 'Hermosillo',
       estado: 'Hermosillo, Sonora',
       sucursal: 'Sucursal Hermosillo',
       direccion: 'Blvd. José María Morelos #267 Col.Loma Linda C.P: 83150. Tel: (662) 215 6282, 210 7293, 215 4672, con 3 líneas de fax 2 15 69 9 mail: hermosillo@sensa.com.mx'
     },
     nogales: {
+       nombre: 'Nogales',
       estado: 'Nogales, Sonora',
       sucursal: 'Sucursal Nogales',
       direccion: 'Blvd. Luis Donaldo Colosio No. 4100 Bodega No. 7, Col. Encinos, C.P: 84064 TELS (01 631) 314 6025, (01 631) 319 2416 mail: nogales@sensa.com.mx RFC: SSE-891128-MB9'
@@ -211,16 +217,19 @@ var estados = {
   bcn: {
     sucursales: ['ensenada', 'mexicali', 'tijuana'],
     ensenada: {
+       nombre: 'Ensenada',
       estado: 'Ensenada, B.C.N.',
       sucursal: 'Sucursal Ensenada',
       direccion: 'Calle Castillo N. 230 Zona Centro C.P: 22800 Tel: (646) 1763540 mail: ensenada@sensa.com.mx RFC: SEN840615-5U8.'
     },
     mexicali: {
+      nombre: 'Mexicali',
       estado: 'Mexicali, B.C.N.',
       sucursal: 'Sucursal Mexicali',
       direccion: 'Blvd. Lázaro Cardenas #1377 Col. Independencia C.P.21290 Tel: (686) 5655526, 5640646 y 5676502 mail: mexicali@sensa.com.mx RFC: SEN840615-5U8'
     },
     tijuana: {
+      nombre: 'Tijuana',
       estado: 'Tijuana, B.C.N.',
       sucursal: 'Sucursal Tijuana',
       direccion: 'Callejón del Carmen #3765, Col 20 de noviembre C.P: 22430 Tel: (664) 6814028 mail: tijuana@sensa.com.mx RFC: SEN840615-5U8.'
@@ -228,13 +237,47 @@ var estados = {
 
   },
   bcs:{
-    sucursales: ['lapaz']
+    sucursales: ['lapaz'],
     lapaz: {
+      nombre: 'La Paz',
       estado: 'La Paz, B.C.S.',
       sucursal: 'Sucursal La Paz',
       direccion: 'Calle Chiapas 3290-3 Col: Las Garzas C.P: 23070 Tel: (612) 12-94-196 mail: lapaz@sensa.com.mx RFC: SEN-840615-5U8.'
     }
   }
-  }
 }
+
+
+$('#Map area').click(function (e) {
+  e.preventDefault();
+  var estado = $(this).attr('id')
+  // console.log(estado)
+  var sucursales = estados[estado].sucursales
+  // console.log(sucursales)
+  $('#title-estado').html(estado)
+  $('.branchlist').empty();
+  $.map(sucursales , function (val, i) {
+    $('.branchlist').append('<li class="botones" data-suc='+val+'>'+estados[estado][val].nombre+'</li>')
+
+  })
+    $('.botones').click( function () {
+    var suc = $(this).attr('data-suc') 
+    var data = estados[estado][suc]
+    $('#sucursal-estado').html(data.estado)
+    $('#sucursal-nombre').html(data.sucursal)
+    $('#sucursal-direccion').html(data.direccion)
+  })
+
+});
+
+    $('.botones').click( function () {
+    var suc = $(this).attr('data-suc') 
+    var data = estados.sinaloa[suc]
+    $('#sucursal-estado').html(data.estado)
+    $('#sucursal-nombre').html(data.sucursal)
+    $('#sucursal-direccion').html(data.direccion)
+
+
+  })
+
 

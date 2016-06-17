@@ -14,7 +14,7 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="login.html">Cliente Sensa</a></li>
-        <li><a href="branch.html">Sucursales</a></li>
+        <li><a href="sucursal.html">Sucursales</a></li>
         <li><a href="contact.html">Contacto</a></li>
       </ul>
     </div>
@@ -47,33 +47,37 @@
             <h4>Para más información</h4>
           </div>
           <div class="col-sm-6">
-            <h2 class="title">Sinaloa</h2>
+            <h2 id="title-estado" class="title">Sinaloa</h2>
             <ul class="branchlist">
-              <li>Bravo</li>
-              <li>Insurgentes</li>
-              <li>Bellavista</li>
+              <li data-suc="bravo" class="botones">Bravo</li>
+              <li data-suc="insurgentes" class="botones">Insurgentes</li>
+              <li data-suc="bellavista" class="botones">Bellavista</li>
             </ul>
             <hr/>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6"><img src="img/mexico.png" alt="" usemap="#Map"/><map id="Map" name="Map">
-              <area alt="" title="" href="#1" shape="poly" coords="37,81,59,82,107,163,97,173,27,82"/>
-              <area alt="" title="" href="#2" shape="poly" coords="3,1,41,0,34,40,59,77,33,78"/>
-              <area alt="" title="" href="#3" shape="poly" coords="45,8,89,29,125,30,125,99,110,112,44,20"/>
-              <area alt="" title="" href="#4" shape="poly" coords="109,118,130,101,168,175"/></map></div>
-          <div class="col-sm-3"><img src="img/sensa-bravo.jpg"/></div>
-          <div class="col-sm-3">
-            <h3 id="sucursal-estado">Culiacán, Sinaloa</h3>
-            <h4 id="sucursal-nombre">Sucursal Bravo</h4>
-            <p id="sucursal-direccion">Nicolás Bravo # 403 Nte. Col. Centro Tel: (667) 713 1100 mail: bravo@sensa.com.mx RFC: SEN840615-5U8.</p>
+              <area alt="" title="" id="bcs" href="" shape="poly" coords="37,81,59,82,107,163,97,173,27,82"/>
+              <area alt="" title="" id="bcn" href="#2" shape="poly" coords="3,1,41,0,34,40,59,77,33,78"/>
+              <area alt="" title="" id="sonora" href="#sonora" shape="poly" coords="45,8,89,29,125,30,125,99,110,112,44,20"/>
+              <area alt="" title="" id="sinaloa" href="#" shape="poly" coords="109,118,130,101,168,175"/></map></div>
+          <div class="col-sm-6 boxcolor">
+            <div class="row">
+              <div class="col-sm-6"><img src="img/sensa-bravo.jpg"/></div>
+              <div class="col-sm-6">
+                <h3 id="sucursal-estado">Culiacán, Sinaloa</h3>
+                <h4 id="sucursal-nombre">Sucursal Bravo</h4>
+                <p id="sucursal-direccion">Nicolás Bravo # 403 Nte. Col. Centro Tel: (667) 713 1100 mail: bravo@sensa.com.mx RFC: SEN840615-5U8.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section>
       <div class="title-section">
-        <p class="title">Encuentra la sucursal más cercana</p><a href="branch.html">a</a>
+        <p class="title">Encuentra la sucursal más cercana </p><a href="branch.html"><img src="img/globe.svg"/><br/><br/></a>
       </div>
     </section>
     <footer>
