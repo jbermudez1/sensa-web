@@ -65,9 +65,6 @@ body {
 .contact .row div h4 {
   text-align: left;
 }
-.main-sucursales {
-  margin-bottom: 5em;
-}
 .formulario .form-title {
   margin-bottom: 4em;
 }
@@ -240,6 +237,28 @@ body {
 .login .pielogin a {
   color: #fff;
   text-decoration: underline;
+}
+.main-sucursales {
+  margin-bottom: 5em;
+}
+.main-sucursales .title {
+  border-bottom: 1px solid #00f;
+}
+.branchlist {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  list-style: none;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+}
+.branchlist li {
+  margin-left: 2em;
+  border-bottom: 1px solid #ffa500;
 }
 @media (min-width: 992px) {
   .isflex {
