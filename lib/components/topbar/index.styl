@@ -1,26 +1,30 @@
-
+$banner-height = 70vh
 .banner
 	background-image url('../img/banner1.jpg')
 	background-position center
 	background-size cover
 	color white
+	height $banner-height
 	.container
 		display flex
 		align-items center
-		min-height 100vh
+		height 100%
 		h1
 			position relative
 			font-size 3em
 			font-weight 100
 			margin-left 20px
 			width 12em
-			&:before
-				content ""
-				background-color $sensa-red
-				width 7px
-				position absolute
-				height 1em
-				left -20px
+			text-shadow 0px 0px 10px black
+			background-color rgba(0,1,31,0.4)
+			padding 0.2em
+			// &:before
+			// 	content ""
+			// 	background-color $sensa-red
+			// 	width 7px
+			// 	position absolute
+			// 	height 1em
+			// 	left -20px
 				
 
 .system
@@ -97,8 +101,6 @@
 			.float
 				position absolute
 	.banner
-		.container
-			min-height 70vh
-		
+		height $banner-height		
 
 

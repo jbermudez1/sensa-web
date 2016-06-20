@@ -192,12 +192,25 @@ body
 	font-size 1.3em
 	margin 0
 	padding 0
+	border-bottom solid 1px lightgray
+	margin-bottom 1em
 	li
-		margin-left 2em
+		// margin-left 1.5em
 		cursor pointer
 		border-bottom 1px solid white
+		height 2em
+		transition all 0.2s 
+		&:after
+			content ""
+			border solid 1px lightgray
+			margin-left 1.5em
+			margin-right 1.5em
 		&:hover
-			border-bottom 1px solid orange
+			color orange
+	.liactive
+		color orange
+.branchhr
+	padding-top 0
 		
 @media (min-width $screen-md)
 	.isflex

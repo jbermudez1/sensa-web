@@ -9,25 +9,25 @@ div.container
 			br
 			a(href="#") Aviso de Privacidad
 		div.col-md-3.text-center.minimap
-			img(src="img/mexico.svg")
+			img.img-responsive(src="img/mexico.png")
 			br
 			button(onclick='window.location.href="branch.html"').viewmore Mas detalles
 		div.col-md-3
-			h2(style="line-height: 0.1em") 7 sucursales
+			h2(style="line-height: 0.1em") 9 sucursales
 			p en todo el pais
 			hr
 			ul.states
-				li 
-					a(href="sucursal.html") Culiacán, Sinaloa
-				li 
-					a(href="sucursal.html") Tijuana, BCN
-				li 
-					a(href="sucursal.html") Mexicali, BCN
-				li 
-					a(href="sucursal.html") Ensenada, Baja California Norte
-				li 
-					a(href="sucursal.html") La paz, Baja California Sur
-				li 
-					a(href="sucursal.html") Hermosillo, Sonora
-				li 
-					a(href="sucursal.html") Nogales, Sonora
+				li.sinaloa(data-s=0)#sinaloaid  
+					a(href="#") Culiacán, Sinaloa (3 Sucursales)
+				li.bcn(data-s=2)  
+					a(href="#") Tijuana, BCN
+				li.bcn(data-s=1)  
+					a(href="#") Mexicali, BCN
+				li.bcn(data-s=0)  
+					a(href="#") Ensenada, BCN
+				li.bcs(data-s=0) 
+					a(href="#") La paz, BCS
+				li.sonora(data-s=0)  
+					a(href="#") Hermosillo, Sonora
+				li.sonora(data-s=1)  
+					a(href="#") Nogales, Sonora

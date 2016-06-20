@@ -87,10 +87,10 @@ function initMap() {
       point: {lat:24.1345772, lng:-110.3155429},
       details: 'Chiapas #3290-3 Col. Las garzas, C.P.23070, Tel: (612) 12 94 196, Mail: lapaz@sensa.com.mx'
     },
-    jaliscoGuadalajara: {
-      point: {lat:20.6658391, lng:-103.3638809},
-      details: 'Av. Alemania #1694, Col. Moderna, C.P.44190 Ote, Tel: (333)8110310, Mail: guadalajara@sensa.com.mx'
-    },
+    // jaliscoGuadalajara: {
+    //   point: {lat:20.6658391, lng:-103.3638809},
+    //   details: 'Av. Alemania #1694, Col. Moderna, C.P.44190 Ote, Tel: (333)8110310, Mail: guadalajara@sensa.com.mx'
+    // },
 	}
 
   // if si se esta cargando desde la seccion de susucrsales
@@ -110,7 +110,7 @@ function initMap() {
 
 	var map = new google.maps.Map(document.getElementById('map'), {
     center: sucursales.culiacanBravo.point,
-    zoom: 6,
+    zoom: 5,
     disableDefaultUI: true,
     zoomControl: false,
     scrollwheel: false
@@ -250,34 +250,60 @@ var estados = {
 
 $('#Map area').click(function (e) {
   e.preventDefault();
-  var estado = $(this).attr('id')
+  var estado = $(this).attr('class')
   // console.log(estado)
   var sucursales = estados[estado].sucursales
   // console.log(sucursales)
   $('#title-estado').html(estado)
   $('.branchlist').empty();
-  $.map(sucursales , function (val, i) {
-    $('.branchlist').append('<li class="botones" data-suc='+val+'>'+estados[estado][val].nombre+'</li>')
+  loadTabs(estado)
+});
 
-  })
-    $('.botones').click( function () {
-    var suc = $(this).attr('data-suc') 
+
+$('.states').find('li').click( function (e) {
+  e.preventDefault();
+  var estado = $(this).attr('class')
+  var attrSuc = $(this).attr('data-s')
+  var suc = estados[estado].sucursales[attrSuc]
+  localStorage.setItem('estado', estado)
+  localStorage.setItem('suc', suc)
+  window.location.href='sucursal.html'
+})
+
+function initSucursales () {
+  if (!localStorage.getItem('estado')) {
+    console.log("no eiste nada")
+    $('#sinaloaid').click();
+  }
+    var estado = localStorage.getItem('estado');
+    var suc = localStorage.getItem('suc')
+    loadData(suc, estado)
+
+  
+}
+
+function loadData (suc, estado) {
+    var suc = suc
     var data = estados[estado][suc]
     $('#sucursal-estado').html(data.estado)
     $('#sucursal-nombre').html(data.sucursal)
     $('#sucursal-direccion').html(data.direccion)
-  })
+    $('#title-estado').html(estado)
+    loadTabs(estado)
+}
 
-});
-
-    $('.botones').click( function () {
-    var suc = $(this).attr('data-suc') 
-    var data = estados.sinaloa[suc]
-    $('#sucursal-estado').html(data.estado)
-    $('#sucursal-nombre').html(data.sucursal)
-    $('#sucursal-direccion').html(data.direccion)
-
+function loadTabs (estado) {
+  $('.branchlist').empty();
+  var sucursales = estados[estado].sucursales
+  $.map(sucursales , function (val, i) {
+    $('.branchlist').append('<li class="botones" data-suc='+val+'>'+estados[estado][val].nombre+'</li>')
 
   })
+  $('.botones').click( function (e) {
+      var suc = $(this).attr('data-suc') 
+      loadData(suc, estado)
+      $(this).addClass('liactive')
+  })
 
+}
 
