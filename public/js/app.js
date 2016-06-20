@@ -184,19 +184,22 @@ var estados = {
           nombre: 'Bravo',
           estado: 'Culiacán, Sinaloa',
           sucursal: 'Sucursal Bravo',
-          direccion: 'Nicolás Bravo #403 Nte. Col. Centro. Tel: (667) 713 1100 mail: bravo@sensa.com.mx RFC: SEN840615-5U8'
+          direccion: 'Nicolás Bravo #403 Nte. Col. Centro. Tel: (667) 713 1100 mail: bravo@sensa.com.mx RFC: SEN840615-5U8',
+          imagen: 'img/bravo.jpg'
         },
         insurgentes: {
           nombre: 'Insurgentes',
           estado: 'Culiacán, Sinaloa',
           sucursal: 'Sucursal Insurgentes',
-          direccion: 'Insurgentes #831 Sur Centro Sinaloa. Tel: (667) 7147050 mail: sensa@sensa.com.mx'
+          direccion: 'Insurgentes #831 Sur Centro Sinaloa. Tel: (667) 7147050 mail: sensa@sensa.com.mx',
+          imagen: 'img/insurgentes.jpg'
         },
         bellavista: {
           nombre: 'Bella Vista',
           estado: 'Culiacán, Sinaloa',
           sucursal: 'Surcusal Bellavista-Cedis',
-          direccion: 'Carretera a Culiacancito #8333-A Tel: 9 92 16 51, 9 92 16 52 mail: sensa@sensa.com.mx'
+          direccion: 'Carretera a Culiacancito #8333-A Tel: 9 92 16 51, 9 92 16 52 mail: sensa@sensa.com.mx',
+          imagen: 'img/bella-vista.jpg'
         }
       },
   sonora: {
@@ -205,13 +208,15 @@ var estados = {
        nombre: 'Hermosillo',
       estado: 'Hermosillo, Sonora',
       sucursal: 'Sucursal Hermosillo',
-      direccion: 'Blvd. José María Morelos #267 Col.Loma Linda C.P: 83150. Tel: (662) 215 6282, 210 7293, 215 4672, con 3 líneas de fax 2 15 69 9 mail: hermosillo@sensa.com.mx'
+      direccion: 'Blvd. José María Morelos #267 Col.Loma Linda C.P: 83150. Tel: (662) 215 6282, 210 7293, 215 4672, con 3 líneas de fax 2 15 69 9 mail: hermosillo@sensa.com.mx',
+      imagen: 'img/hermosillo.jpg'
     },
     nogales: {
        nombre: 'Nogales',
       estado: 'Nogales, Sonora',
       sucursal: 'Sucursal Nogales',
-      direccion: 'Blvd. Luis Donaldo Colosio No. 4100 Bodega No. 7, Col. Encinos, C.P: 84064 TELS (01 631) 314 6025, (01 631) 319 2416 mail: nogales@sensa.com.mx RFC: SSE-891128-MB9'
+      direccion: 'Blvd. Luis Donaldo Colosio No. 4100 Bodega No. 7, Col. Encinos, C.P: 84064 TELS (01 631) 314 6025, (01 631) 319 2416 mail: nogales@sensa.com.mx RFC: SSE-891128-MB9',
+      imagen: 'img/nogales.jpg'
     }
   },
   bcn: {
@@ -220,19 +225,22 @@ var estados = {
        nombre: 'Ensenada',
       estado: 'Ensenada, B.C.N.',
       sucursal: 'Sucursal Ensenada',
-      direccion: 'Calle Castillo N. 230 Zona Centro C.P: 22800 Tel: (646) 1763540 mail: ensenada@sensa.com.mx RFC: SEN840615-5U8.'
+      direccion: 'Calle Castillo N. 230 Zona Centro C.P: 22800 Tel: (646) 1763540 mail: ensenada@sensa.com.mx RFC: SEN840615-5U8.',
+      imagen: 'img/ensenada.jpg'
     },
     mexicali: {
       nombre: 'Mexicali',
       estado: 'Mexicali, B.C.N.',
       sucursal: 'Sucursal Mexicali',
-      direccion: 'Blvd. Lázaro Cardenas #1377 Col. Independencia C.P.21290 Tel: (686) 5655526, 5640646 y 5676502 mail: mexicali@sensa.com.mx RFC: SEN840615-5U8'
+      direccion: 'Blvd. Lázaro Cardenas #1377 Col. Independencia C.P.21290 Tel: (686) 5655526, 5640646 y 5676502 mail: mexicali@sensa.com.mx RFC: SEN840615-5U8',
+      imagen: 'img/mexicali.jpg'
     },
     tijuana: {
       nombre: 'Tijuana',
       estado: 'Tijuana, B.C.N.',
       sucursal: 'Sucursal Tijuana',
-      direccion: 'Callejón del Carmen #3765, Col 20 de noviembre C.P: 22430 Tel: (664) 6814028 mail: tijuana@sensa.com.mx RFC: SEN840615-5U8.'
+      direccion: 'Callejón del Carmen #3765, Col 20 de noviembre C.P: 22430 Tel: (664) 6814028 mail: tijuana@sensa.com.mx RFC: SEN840615-5U8.',
+      imagen: 'img/tijuana.jpg'
     }
 
   },
@@ -242,7 +250,8 @@ var estados = {
       nombre: 'La Paz',
       estado: 'La Paz, B.C.S.',
       sucursal: 'Sucursal La Paz',
-      direccion: 'Calle Chiapas 3290-3 Col: Las Garzas C.P: 23070 Tel: (612) 12-94-196 mail: lapaz@sensa.com.mx RFC: SEN-840615-5U8.'
+      direccion: 'Calle Chiapas 3290-3 Col: Las Garzas C.P: 23070 Tel: (612) 12-94-196 mail: lapaz@sensa.com.mx RFC: SEN-840615-5U8.',
+      imagen: 'img/lapaz.jpg'
     }
   }
 }
