@@ -265,6 +265,12 @@ $('#Map area').click(function (e) {
   var sucursales = estados[estado].sucursales
   // console.log(sucursales)
   $('#title-estado').html(estado)
+    if (estado == 'bcn') {
+      $('#title-estado').html('Baja California Norte')
+    }
+    if (estado == 'bcs') {
+      $('#title-estado').html('Baja California Sur')
+    }
   $('.branchlist').empty();
   loadTabs(estado)
 });
@@ -299,6 +305,13 @@ function loadData (suc, estado) {
     $('#sucursal-nombre').html(data.sucursal)
     $('#sucursal-direccion').html(data.direccion)
     $('#title-estado').html(estado)
+    if (estado == 'bcn') {
+      $('#title-estado').html('Baja California Norte')
+    }
+    if (estado == 'bcs') {
+      $('#title-estado').html('Baja California Sur')
+    }
+    $('.imgsucursal').attr( 'src', data.imagen)
     loadTabs(estado)
 }
 

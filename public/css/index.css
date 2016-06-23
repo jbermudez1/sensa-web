@@ -247,6 +247,15 @@ body {
 }
 .main-sucursales .title {
   text-transform: capitalize;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 100;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  background-color: #2a2b79;
+  color: #fff;
+  -webkit-border-radius: 5em;
+  border-radius: 5em;
 }
 .branchlist {
   display: -webkit-box;
@@ -487,44 +496,22 @@ nav .topbar .menu ul .active a {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-.banner .slidershow li .pie {
-  background-color: #0f0;
-  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 .banner .slidershow li .text {
   padding-left: 10%;
+}
+.banner .slidershow li .text .pie {
+  width: 12em;
 }
 .banner .slidershow li .text h1 {
   position: relative;
   width: 12em;
   font-size: 3em;
   font-weight: 100;
-  text-shadow: 0px 0px 10px #000;
-  background-color: rgba(0,1,31,0.4);
-  padding: 0.2em;
-}
-.banner .container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  height: 100%;
-}
-.banner .container h1 {
-  position: relative;
-  font-size: 3em;
-  font-weight: 100;
-  margin-left: 20px;
-  width: 12em;
   text-shadow: 0px 0px 10px #000;
   background-color: rgba(0,1,31,0.4);
   padding: 0.2em;
