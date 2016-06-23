@@ -1,10 +1,37 @@
 $banner-height = 70vh
 .banner
-	background-image url('../img/banner1.jpg')
-	background-position center
-	background-size cover
+	// background-image url('../img/banner1.jpg')
 	color white
 	height $banner-height
+	.slidershow
+		padding 0
+		list-style none
+		height $banner-height
+		position relative
+		li
+			height $banner-height
+			position absolute
+			width 100%
+			>div
+				height $banner-height
+				display flex
+				flex-flow column
+				align-items fex-start
+				justify-content center
+			.pie
+				background-color lime
+				text-align center
+			.text
+				padding-left 10%
+				h1
+					position relative
+					width 12em
+					font-size 3em
+					font-weight 100
+					text-shadow 0px 0px 10px black
+					background-color rgba(0,1,31,0.4)
+					padding 0.2em
+
 	.container
 		display flex
 		align-items center

@@ -447,13 +447,62 @@ nav .topbar .menu ul .active a {
   color: #ed1e24 !important;
 }
 .banner {
-  background-image: url("../img/banner1.jpg");
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
   color: #fff;
   height: 70vh;
+}
+.banner .slidershow {
+  padding: 0;
+  list-style: none;
+  height: 70vh;
+  position: relative;
+}
+.banner .slidershow li {
+  height: 70vh;
+  position: absolute;
+  width: 100%;
+}
+.banner .slidershow li >div {
+  height: 70vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: fex-start;
+  -moz-box-align: fex-start;
+  -o-box-align: fex-start;
+  -ms-flex-align: fex-start;
+  -webkit-align-items: fex-start;
+  align-items: fex-start;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.banner .slidershow li .pie {
+  background-color: #0f0;
+  text-align: center;
+}
+.banner .slidershow li .text {
+  padding-left: 10%;
+}
+.banner .slidershow li .text h1 {
+  position: relative;
+  width: 12em;
+  font-size: 3em;
+  font-weight: 100;
+  text-shadow: 0px 0px 10px #000;
+  background-color: rgba(0,1,31,0.4);
+  padding: 0.2em;
 }
 .banner .container {
   display: -webkit-box;

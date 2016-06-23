@@ -4,6 +4,7 @@ $(document).ready(ready)
 function ready (argument) {
 	console.log("ready")
   menu();
+  slider();
   $('.ch-item').click( function() {
     window.location.href="/login.html"
   })
@@ -315,4 +316,33 @@ function loadTabs (estado) {
   })
 
 }
+
+
+function slider () {
+  var items = $('.slidershow li').length
+  var contador = items
+
+  // for (var i = 0; i < items; i++) {
+    var loop =  function () {
+      if (contador == 1) {
+        contador = items
+        $('.slidershow li').fadeIn()
+        return false
+      };
+      console.log(contador)
+      $('.slidershow li:nth-child('+ contador +')').fadeOut()
+      contador = contador - 1
+    }
+
+
+
+    setInterval(loop, 8000);
+      
+}
+      
+  // };
+
+     // $('.slidershow li:nth-child('+ 2 +')').fadeOut();
+
+ 
 
