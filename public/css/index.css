@@ -238,8 +238,14 @@ body {
   color: #fff;
   text-decoration: underline;
 }
+.sucursalimg {
+  background-image: url("../img/load.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 30em;
+}
 .boxcolor {
-  background-color: #f5f5f5;
+  border: solid 2px #f5f5f5;
   padding: 0.5em;
 }
 .main-sucursales {
@@ -505,11 +511,11 @@ nav .topbar .menu ul .active a {
   padding-left: 10%;
 }
 .banner .slidershow li .text .pie {
-  width: 12em;
+  max-width: 12em;
 }
 .banner .slidershow li .text h1 {
   position: relative;
-  width: 12em;
+  max-width: 12em;
   font-size: 3em;
   font-weight: 100;
   text-shadow: 0px 0px 10px #000;

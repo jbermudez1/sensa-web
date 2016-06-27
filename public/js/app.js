@@ -287,20 +287,26 @@ $('.states').find('li').click( function (e) {
 })
 
 function initSucursales () {
+
   if (!localStorage.getItem('estado')) {
     console.log("no eiste nada")
     $('#sinaloaid').click();
   }
     var estado = localStorage.getItem('estado');
     var suc = localStorage.getItem('suc')
-    loadData(suc, estado)
+    loadTabs(estado)
+    loadData(suc, estado, firts)
 
   
 }
 
-function loadData (suc, estado) {
+function loadData (suc, estado, click) {
     var suc = suc
     var data = estados[estado][suc]
+    // activa el tab
+     $('.branchlist li').removeClass('liactive')
+      $(click).addClass('liactive')
+
     $('#sucursal-estado').html(data.estado)
     $('#sucursal-nombre').html(data.sucursal)
     $('#sucursal-direccion').html(data.direccion)
@@ -312,20 +318,26 @@ function loadData (suc, estado) {
       $('#title-estado').html('Baja California Sur')
     }
     $('.imgsucursal').attr( 'src', data.imagen)
-    loadTabs(estado)
+    // loadTabs(estado)
+
 }
 
 function loadTabs (estado) {
+  $('.imgsucursal').attr( 'src', '')
   $('.branchlist').empty();
   var sucursales = estados[estado].sucursales
   $.map(sucursales , function (val, i) {
     $('.branchlist').append('<li class="botones" data-suc='+val+'>'+estados[estado][val].nombre+'</li>')
 
   })
+    var firts = $('.branchlist li:nth-child(1)')
+    loadData(estados[estado].sucursales[0] ,estado, firts)
+
+
   $('.botones').click( function (e) {
-      var suc = $(this).attr('data-suc') 
-      loadData(suc, estado)
-      $(this).addClass('liactive')
+      var suc = $(this).attr('data-suc')
+      var click = $(this)
+      loadData(suc, estado, click)
   })
 
 }
