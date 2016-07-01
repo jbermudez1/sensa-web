@@ -6,7 +6,7 @@ nav
 	background-color white
 	z-index 99
 	border-top solid 2px $sensa-red
-	height $menu-height
+	height 5em
 	.topbar
 		display flex
 		align-items center
@@ -19,8 +19,10 @@ nav
 			flex-grow 2
 			text-align center
 			img
-				max-height 4em
-				max-width 18em
+				width 200px
+				height 40px
+				// max-height 6em
+				// max-width 15em
 		.menu
 			height 100%
 			display flex
@@ -32,7 +34,7 @@ nav
 				li
 					color $sensa-blue
 					font-family 'Roboto', sans-serif
-					font-size 1.1em
+					font-size 1.2em
 					height 100%
 					display flex
 					align-items center
@@ -59,4 +61,13 @@ nav
 					border-bottom solid 5px #2C85CE
 					a
 						color $sensa-red !important
+@media (min-width $screen-lg)
+	nav
+		height $menu-height
+		.logo
+			flex-grow 2
+			text-align center
+			img
+				width 350px !important
+				height 70px !important
 							
